@@ -29,9 +29,6 @@ module.exports = {
         test: /\.html$/,
         loader: 'html-loader'
       },
-      {
-  "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-}
     ]
   },
   resolve: {

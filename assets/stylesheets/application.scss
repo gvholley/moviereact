@@ -4,6 +4,11 @@ body {
   color: white;
 }
 
+.movie-app > .row {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
 #root {
   height: 100vh;
   display: flex;

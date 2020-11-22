@@ -25,11 +25,27 @@ const App = () => {
             "Type": "movie",
             "Poster": "https://m.media-amazon.com/images/M/MV5BOWZlMjFiYzgtMTUzNC00Y2IzLTk1NTMtZmNhMTczNTk0ODk1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
         }]);
+
+  const getMovieRequest = async() => {
+    const url = "http://www.omdbapi.com/?s=star wars&apikey=c5171cf5"
+    const response = await fetch(url);
+    const responseJson = await response.json();
+    console.log(responseJson);
+    setMovies(responseJson.Search);
+  };
+
+  useEffect(() => {
+    getMovieRequest();
+  }, []);
+
   return (
-    <div>
+    <div className='container-fluid movie-app'>
+    <div className='row'>
       <MovieList movies={movies} />
+    </div>
     </div>
   );
 };
+
 
 export default App;
