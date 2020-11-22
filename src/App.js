@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import MovieList from './components/MovieList';
-import MovieListHeading from './components/MovieListHeading';
-import SearchBox from './components/SearchBox';
+import React, { useState, useEffect } from 'react';
+import {MovieList} from './components/MovieList';
+import {MovieListHeading} from './components/MovieListHeading';
+import {SearchBox} from './components/SearchBox';
 
 import '../assets/stylesheets/application.scss';
 
